@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv">
+    <p>This paragraph is inside a div.</p>
+  </div>
+
+  <script>
+    // This script attempts to access a non-existent element
+    let myElement = document.getElementById("nonExistentElement");
+    if (myElement) {
+      myElement.textContent = "This will not execute";
+    } 
+  </script>
+</body>
+</html>

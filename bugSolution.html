@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv">
+    <p>This paragraph is inside a div.</p>
+  </div>
+
+  <script>
+    try {
+        let myElement = document.getElementById("myDiv");
+        if (myElement) {
+          myElement.textContent = "Element found!";
+        } else {
+          console.error("Element with id 'myDiv' not found.");
+        }
+        // Attempting to access a non-existent element
+        let nonExistentElement = document.getElementById("nonExistentElement");
+        if (nonExistentElement) {
+          nonExistentElement.textContent = "This will not execute";
+        } else{
+            console.error("Element with id 'nonExistentElement' not found.");
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+  </script>
+</body>
+</html>
